@@ -1,0 +1,19 @@
+stages:
+  - start
+  - failure_msg
+
+npm start:
+  stage: start
+  script:
+    - cd ..
+    - ./build.sh | tee ./out.log
+    - ./notice.sh
+
+Send Failure Message:
+  stage: failure_msg
+  script:
+    - cd ..
+    - ./failure_notice.sh
+    - ./build.sh | tee ./out.log
+    - ./notice.sh
+  when: on_failure

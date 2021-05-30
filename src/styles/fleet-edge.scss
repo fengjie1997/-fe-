@@ -1,0 +1,68 @@
+// FE全局样式调整
+// 自定义图标
+@import '../assets/icon/iconfont.css';
+
+// 表格样式
+.el-table th,
+.el-table td,
+.el-table--mini td,
+.el-table--mini th{
+  height: 32px;
+  padding: 0 !important;
+}
+.el-table-column--selection .cell {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+// 表单样式
+.el-form-item__label {
+  font-weight: normal;
+  font-size: 12px;
+}
+.el-input__inner {
+  font-weight: normal;
+  font-size: 12px;
+}
+.el-form-item .el-form-item__label-wrap>.el-form-item__label:before, .el-form-item>.el-form-item__label:before {
+  content: '*';
+  color: #fff;
+  margin-right: 4px;
+  visibility: hidden;
+}
+.el-form-item.is-required:not(.is-no-asterisk) .el-form-item__label-wrap>.el-form-item__label:before, .el-form-item.is-required:not(.is-no-asterisk)>.el-form-item__label:before {
+  visibility: visible;
+}
+
+// select下拉组件的高度过长，做一个最大限制
+.el-cascader-panel {
+  max-height: 300px;
+}
+
+
+// pl-table样式
+.plx-table {
+  font-size: 12px !important;
+}
+.plx-table .plx-body--column.col--ellipsis, .plx-table.plx-editable .plx-body--column, .plx-table .plx-footer--column.col--ellipsis, .plx-table .plx-header--column.col--ellipsis {
+  height: 32px !important;
+}
+
+.plx-table .plx-body--row.row--current, .plx-table .plx-body--row.row--current .plx-tree--btn-wrapper {
+  background-color: #ecf5ff !important;
+}
+
+.plx-table:not(.b--style-none) .plx-table--header-wrapper {
+  background-color: #fff !important;
+}
+
+// 轨迹监控 marker
+.trajectory-marker {
+  background: url(../assets/icons/carIcon.png) no-repeat;
+  width: 128px;
+  height: 128px;
+}
+// 在线设备样式
+.device-online {
+  color: #409EFF;
+}
